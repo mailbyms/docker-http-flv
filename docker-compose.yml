@@ -1,0 +1,17 @@
+
+# 注意,如果要映射/data目录，先 mkdir -p data/video
+
+version: '3'
+services:
+  httpflv:
+    #restart: always
+    image: mailbyms/http-flv
+    environment:
+      - "TZ=Asia/Shanghai"
+    volumes:
+      - ./logs:/usr/local/nginx/logs
+      - ./data:/data
+    ports:
+      - 1935:1935
+      - 9090:9090
+      - 8002:8002
