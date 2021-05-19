@@ -24,3 +24,4 @@ HTTP-FLV服务器：nginx with nginx-http-flv-module
 ## HTTP-FLV 播放器 Demo
 - 下载 flv.min.js  1.5 版本：https://www.bootcdn.cn/flv.js/
 - 播放器 DEMO 代码见 player 目录，（另外替换成上面1.5版本的 flv.js）:https://github.com/saysmy/flvjs-pr354
+- 注意如果直播流没有音频时，要去掉 hasAudio 的勾
