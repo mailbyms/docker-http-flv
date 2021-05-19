@@ -1,5 +1,5 @@
 
-# 注意,如果要映射/data目录，先 mkdir -p data/video
+# 注意,如果要映射/data目录，先 mkdir -p data/video && chmod a+w data/video
 
 version: '3'
 services:

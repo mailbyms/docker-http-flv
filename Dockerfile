@@ -34,7 +34,7 @@ RUN yum install -y libxslt \
     # find keyword "http {", and insert "include rtmp.conf" into the previous line
     && sed -i '/http[[:space:]]{/i\    include rtmp.conf;' ${NGINX_BASE_DIR}/conf/nginx.conf \
     # find keyword gzip, and insert "include http_hls.conf" into the next line 
-    && sed -i '/gzip/a\    include http_hls.conf;\ninclude http_flv.conf;' ${NGINX_BASE_DIR}/conf/nginx.conf \
+    && sed -i '/gzip/a\    include http_hls.conf;\n    include http_flv.conf;' ${NGINX_BASE_DIR}/conf/nginx.conf \
     && mkdir -p /data/video
 
 CMD [ "/usr/local/nginx/sbin/nginx", "-g", "daemon off;" ]
